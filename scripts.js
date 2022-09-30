@@ -16,8 +16,3 @@ hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, www.
 
 # 知乎去广告 (onewayticket255)
 https://api.zhihu.com/(ad|drama|fringe|commercial|market/popover|search/(top|preset|tab)|.*featured-comment-ad) url reject-200
-
-#youtube去广告
-(^https?:\/\/(?!((r\d-)|manifest))[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier(,.+?)((&probe=1)|$) url 302 $1$4$5
-(^https?:\/\/(?!((r\d-)|manifest))[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)\/ctier\/L(\/.+?),ctier(,.+?)((\/probe\/1)|$) url 302 $1$4$5
-(^https?:\/\/(?!((r\d-)|manifest))[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)\/ctier\/L(\/.+?)%2Cctier(%2C.+?)((\/probe\/1)|$) url 302 $1$4$5
